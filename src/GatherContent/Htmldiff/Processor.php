@@ -9,6 +9,7 @@ class Processor implements ProcessorInterface
         $config = array(
             'wrap' => false,
             'show-body-only' => true,
+            'new-blocklevel-tags'  => 'section',
         );
 
         $tidyNode = tidy_parse_string($html, $config, 'utf8')->body();
