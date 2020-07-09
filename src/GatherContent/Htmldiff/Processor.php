@@ -9,7 +9,9 @@ class Processor implements ProcessorInterface
         $config = array(
             'wrap' => false,
             'show-body-only' => true,
-            'new-blocklevel-tags'  => 'section',
+            'new-blocklevel-tags' => 'article aside audio bdi canvas details dialog figcaption figure footer header hgroup main menu menuitem nav section source summary template track video',
+            'new-empty-tags' => 'command embed keygen source track wbr',
+            'new-inline-tags' => 'audio command datalist embed keygen mark menuitem meter output progress source time video wbr',
         );
 
         $tidyNode = tidy_parse_string($html, $config, 'utf8')->body();
