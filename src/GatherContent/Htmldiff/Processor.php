@@ -10,7 +10,7 @@ class Processor implements ProcessorInterface
             'wrap' => false,
             'show-body-only' => true,
             'new-blocklevel-tags' => 'section',
-			'new-inline-tags' => 'audio command datalist embed keygen mark menuitem meter output progress source time video wbr',
+	    'new-inline-tags' => 'audio command datalist embed keygen mark menuitem meter output progress source time video wbr',
         );
 
         $tidyNode = tidy_parse_string($html, $config, 'utf8')->body();
